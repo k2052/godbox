@@ -1,0 +1,19 @@
+{
+  "gems": [
+    { "name": "rake" },
+    { "name": "padrino" },
+    { "name": "bundler" },
+    { "name": "rack" },
+    { "name": "vlad" },
+    { "name": "resque" },
+    { "name": "redis" }  
+  ],  
+  "run_list": [ 
+   "recipe[nginx]",
+   "recipe[monit]", 
+   "recipe[unicorn]", 
+   "recipe[redis]",
+   "recipe[gems]", 
+   "recipe[mongodb]"  
+ ] 
+}
